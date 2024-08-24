@@ -27,6 +27,6 @@ if "espressif" in env.subst("$PIOPLATFORM"):
 
 flags = f"--path:{libdeps} " f"--cpu:{cpu} "
 
-result = system(f"nim cpp {flags} {src/'main'}")
+result = system(f"nim cpp {flags} {prj_src_dir / 'main'}")
 if result != 0:
     exit(result)
